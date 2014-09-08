@@ -15,10 +15,10 @@
 
 <body>
 	<h1>Truth Table</h1>
-<table width="200" border="1">
+<table width="400" border="1">
   <tbody>
     <tr>
-      <tdh>X</th>
+      <th>X</th>
       <th>Y</th>
       <th>!X</th>
 	  <th>!Y</th>
@@ -41,8 +41,23 @@
 		document.write("<td>"+(!x?'T':'F')+"</td>");
         document.write("<td>"+(!y?'T':'F')+"</td>");
 		document.write("<td>"+(x&&y?'T':'F')+"</td>");
+		document.write("<td>"+(x||y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^x?'T':'F')+"</td>");
+		document.write("<td>"+(!(x&&y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x||!y?'T':'F')+"</td>");
+		document.write("<td>"+(!(x||y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x&&!y?'T':'F')+"</td>");
+		/*
+		COMMENT: Make sure to mind placement of 
+		partenthesis. They are very particular of where
+		they go and what they are "capping".
+		*/ 
 		</script>
-        <script type="text/javascript">
+        </tr>
+        </tr><tr>
+	<script type="text/javascript">
 		var x=true;
 		var y=false;
 		document.write("<td>"+(x?'T':'F')+"</td>");
@@ -50,28 +65,59 @@
 		document.write("<td>"+(!x?'T':'F')+"</td>");
         document.write("<td>"+(!y?'T':'F')+"</td>");
 		document.write("<td>"+(x&&y?'T':'F')+"</td>");
+		document.write("<td>"+(x||y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^x?'T':'F')+"</td>");
+		document.write("<td>"+(!(x&&y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x||!y?'T':'F')+"</td>");
+		document.write("<td>"+(!(x||y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x&&!y?'T':'F')+"</td>");
+		
 		</script>
+        </tr>
         
-        
-        
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-	  <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
+        <tr>
+	<script type="text/javascript">
+		var x=false;
+		var y=true;
+		document.write("<td>"+(x?'T':'F')+"</td>");
+        document.write("<td>"+(y?"T":"F")+"</td>");
+		document.write("<td>"+(!x?'T':'F')+"</td>");
+        document.write("<td>"+(!y?'T':'F')+"</td>");
+		document.write("<td>"+(x&&y?'T':'F')+"</td>");
+		document.write("<td>"+(x||y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^x?'T':'F')+"</td>");
+		document.write("<td>"+(!(x&&y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x||!y?'T':'F')+"</td>");
+		document.write("<td>"+(!(x||y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x&&!y?'T':'F')+"</td>");
+		
+		</script>
+        </tr>
+   <tr>
+	<script type="text/javascript">
+		var x=false;
+		var y=false;
+		document.write("<td>"+(x?'T':'F')+"</td>");
+        document.write("<td>"+(y?"T":"F")+"</td>");
+		document.write("<td>"+(!x?'T':'F')+"</td>");
+        document.write("<td>"+(!y?'T':'F')+"</td>");
+		document.write("<td>"+(x&&y?'T':'F')+"</td>");
+		document.write("<td>"+(x||y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^y?'T':'F')+"</td>");
+		document.write("<td>"+(x^y^x?'T':'F')+"</td>");
+		document.write("<td>"+(!(x&&y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x||!y?'T':'F')+"</td>");
+		document.write("<td>"+(!(x||y)?'T':'F')+"</td>");
+		document.write("<td>"+(!x&&!y?'T':'F')+"</td>");
+		
+		</script>
+        </tr>
+    
     </tr>
   </tbody>
 </table>
