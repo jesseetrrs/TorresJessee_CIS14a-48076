@@ -25,10 +25,10 @@
 	document.write ("<h1> Over time start 	= "+ovt+"</h1>");
 	//Determine paycheck
 	if(hours<ovt)payChk=hours*payRate;
-	if(hours>=ovt)payChk=hours*payRate+(hours-ovt)*payRate;
+	else payChk=hours*payRate+(hours-ovt)*payRate;
 	payChk=payChk.toFixed(2);
 	//Output our Pay Check
-	//Not as efficient because I have to run two tests, both depedent. DEPENDANT IFS
+	//More efficient than two independet if statements
 document.write("<h1> Our Pay Check ="+$payChk+"</h1>");
 </script>
 </body>

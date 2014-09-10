@@ -24,12 +24,12 @@
 	document.write ("<h1> Pay Rate      	= $ "+payRate+"</h1>");
 	document.write ("<h1> Over time start 	= "+ovt+"</h1>");
 	//Determine paycheck
-	if(hours<ovt)payChk=hours*payRate;
-	if(hours>=ovt)payChk=hours*payRate+(hours-ovt)*payRate;
+	payChk=(hours<ovt)?hours*payRate:
+					  hours*payRate+(hours-ovt)*payRate;
 	payChk=payChk.toFixed(2);
 	//Output our Pay Check
-	//Not as efficient because I have to run two tests, both depedent. DEPENDANT IFS
-document.write("<h1> Our Pay Check ="+$payChk+"</h1>");
+	//No way to put in multiple statements. ? and: seperates from true to evaulated 		    false statement.
+document.write("<h1>Our Pay Check = $"+$payChk+"</h1>");
 </script>
 </body>
 </html>
