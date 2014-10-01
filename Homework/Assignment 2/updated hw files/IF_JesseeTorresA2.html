@@ -16,13 +16,11 @@
 <script type="text/javascript">
 	//Declare and initialize variables
 	var hours=parseInt(Math.random()*20+30);//Hours worked in (hrs) 
-	//MAth.random *59+1
 		//Generates a random number
 	var payRate=10;//($'s/hr)
 	var straightTime=20;
-	//Redudant to add straightTime= check math to see if needed. MARK LAW=least amount of code to us
-	var doubleTime=21;//Hour at which double time starts
-	var tripleTime=40;
+	var doubleTime=40;//Hour at which double time starts
+	var tripleTime=60;
 
 	var payChk;//Declaration of Pay Check in Dollars
 	//Output the inputs
@@ -40,8 +38,8 @@
 	if(hours>straightTime && hours <= doubleTime)payChk=hours*payRate+((hours-straightTime)*payRate); 
 	
 	//HELP: DO NOT KNOW WHERE I AM GOING WRONG ON EQUATIONS. Where am I going wrong    with the math?
-	
-	if(hours>tripleTime)payChk=hours*payRate+((hours-doubleTime)*payRate)+((hours-tripleTime)*payRate); 
+	if(hours<=tripleTime)payChk=hours*payRate+((hours-doubleTime)*payRate);
+	if(hours>=tripleTime)payChk=hours*payRate+((hours-doubleTime)*payRate); 
 	
 	
 	payChk=payChk.toFixed(2);
