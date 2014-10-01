@@ -19,27 +19,27 @@
 	//MAth.random *59+1
 		//Generates a random number
 	var payRate=10;//($'s/hr)
-	var straightTime=20;
+	//var straightTime=20;
 	//Redudant to add straightTime= check math to see if needed. MARK LAW=least amount of code to us
-	var doubleTime=21;//Hour at which double time starts
+	var doubleTime=20;//Hour at which double time starts
 	var tripleTime=40;
 
 	var payChk;//Declaration of Pay Check in Dollars
 	//Output the inputs
 	document.write("<h1>Hours worked    =  "+hours  +" (hrs)</h1>");
 	document.write("<h1>Pay Rate        = $"+payRate+"      </h1>");
-	document.write("<h1>Straight Time        = "+straightTime+" (hrs)</h1>");
+	//document.write("<h1>Straight Time        = "+straightTime+" (hrs)</h1>");
 	document.write("<h1>Double time starts =  "+doubleTime    +" (hrs)</h1>");
 	document.write("<h1>Triple time starts =  "+tripleTime    +" (hrs)</h1>");
 	//Determine our paycheck
 	
-	if(hours<=straightTime)payChk=hours*payRate; 
+	if(hours<=doubleTime)payChk=hours*payRate; 
 	
 	
+	if(hours>doubleTime && hours <= tripleTime)payChk=hours*payRate+((hours-doubleTime)*payRate); 
 	
-	if(hours>straightTime && hours <= doubleTime)payChk=hours*payRate+((hours-straightTime)*payRate); 
-	
-	//HELP: DO NOT KNOW WHERE I AM GOING WRONG ON EQUATIONS. Where am I going wrong    with the math?
+	//&& combines two things. You need to add doubleTime and tripleTime in the last equation. The 
+	//straightTime was redundant and ruining the code.
 	
 	if(hours>tripleTime)payChk=hours*payRate+((hours-doubleTime)*payRate)+((hours-tripleTime)*payRate); 
 	
